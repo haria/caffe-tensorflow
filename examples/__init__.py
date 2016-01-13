@@ -1,5 +1,5 @@
 from googlenet import GoogleNet
-from vgg import VGG16
+from vgg import VGG16Face
 from alexnet import AlexNet
 from caffenet import CaffeNet
 
@@ -17,8 +17,8 @@ class NetConfig(object):
 
 MODELS = [
 
-    NetConfig(VGG16,
-              batch_size=25,
+    NetConfig(VGG16Face,
+              batch_size=1,
               scale_size=256,
               crop_size=224,
               isotropic=True),

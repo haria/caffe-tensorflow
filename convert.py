@@ -3,8 +3,8 @@
 import os
 import sys
 import numpy as np
-from kaffe import KaffeError
-from kaffe.tensorflow import TensorFlowTransformer
+from caffe import CaffeError
+from caffe.tensorflow import TensorFlowTransformer
 
 def main():
     args = sys.argv[1:]

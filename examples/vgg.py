@@ -1,6 +1,6 @@
-from kaffe.tensorflow import Network
+from caffe.tensorflow import Network
 
-class VGG16(Network):
+class VGG16Face(Network):
     def setup(self):
         (self.feed('data')
              .conv(3, 3, 64, 1, 1, name='conv1_1')
@@ -23,5 +23,5 @@ class VGG16(Network):
              .max_pool(2, 2, 2, 2, name='pool5')
              .fc(4096, name='fc6')
              .fc(4096, name='fc7')
-             .fc(1000, relu=False, name='fc8')
+             .fc(89, relu=False, name='fc8_vgg_face_1451150897')
              .softmax(name='prob'))
